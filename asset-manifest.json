@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Chess-Board-Using-ReactJS/static/css/main.b7d35d35.css",
+    "main.js": "/Chess-Board-Using-ReactJS/static/js/main.b38215ba.js",
+    "static/js/453.8411124a.chunk.js": "/Chess-Board-Using-ReactJS/static/js/453.8411124a.chunk.js",
+    "index.html": "/Chess-Board-Using-ReactJS/index.html",
+    "main.b7d35d35.css.map": "/Chess-Board-Using-ReactJS/static/css/main.b7d35d35.css.map",
+    "main.b38215ba.js.map": "/Chess-Board-Using-ReactJS/static/js/main.b38215ba.js.map",
+    "453.8411124a.chunk.js.map": "/Chess-Board-Using-ReactJS/static/js/453.8411124a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b7d35d35.css",
+    "static/js/main.b38215ba.js"
+  ]
+}
