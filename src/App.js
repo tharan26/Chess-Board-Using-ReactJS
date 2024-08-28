@@ -1,58 +1,91 @@
 import React from 'react';
 import './App.css';
 
-const initialBoard = [
-  ['r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'],
-  ['p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'],
-  Array(8).fill(null),
-  Array(8).fill(null),
-  Array(8).fill(null),
-  Array(8).fill(null),
-  ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'],
-  ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'],
-];
-
-
-const pieceClasses = {
-  'r': 'fas fa-chess-rook', 'n': 'fas fa-chess-knight', 'b': 'fas fa-chess-bishop', 'q': 'fas fa-chess-queen', 'k': 'fas fa-chess-king', 'p': 'fas fa-chess-pawn',
-  'R': 'fas fa-chess-rook', 'N': 'fas fa-chess-knight', 'B': 'fas fa-chess-bishop', 'Q': 'fas fa-chess-queen', 'K': 'fas fa-chess-king', 'P': 'fas fa-chess-pawn'
-};
-
-const Board = () => {
-  const size = 8; 
-  const rows = [];
-  
-  for (let row = 0; row < size; row++) {
-    const squares = [];
-    for (let col = 0; col < size; col++) {
-      const isDark = (row + col) % 2 === 0;
-      const piece = initialBoard[row][col];
-      const pieceClass = piece ? pieceClasses[piece] : '';
-      const pieceColor = row < 2 ? 'black' : 'white';
-      
-      squares.push(
-        <div
-          key={`${row}-${col}`}
-          className={`square ${isDark ? 'dark' : 'light'} ${pieceColor}`}
-        >
-          {piece && <i className={pieceClass}></i>}
-        </div>
-      );
-    }
-    rows.push(
-      <div key={row} className="row">
-        {squares}
-      </div>
-    );
-  }
-  
-  return <div className="board">{rows}</div>;
-};
-
 const App = () => {
   return (
     <div className="App">
-      <Board />
+      <div className="board">
+        <div className="row">
+          <div className="square dark"><i className="fas fa-chess-rook black"></i></div>
+          <div className="square light"><i className="fas fa-chess-knight black"></i></div>
+          <div className="square dark"><i className="fas fa-chess-bishop black"></i></div>
+          <div className="square light"><i className="fas fa-chess-queen black"></i></div>
+          <div className="square dark"><i className="fas fa-chess-king black"></i></div>
+          <div className="square light"><i className="fas fa-chess-bishop black"></i></div>
+          <div className="square dark"><i className="fas fa-chess-knight black"></i></div>
+          <div className="square light"><i className="fas fa-chess-rook black"></i></div>
+        </div>
+        <div className="row">
+          <div className="square light"><i className="fas fa-chess-pawn black"></i></div>
+          <div className="square dark"><i className="fas fa-chess-pawn black"></i></div>
+          <div className="square light"><i className="fas fa-chess-pawn black"></i></div>
+          <div className="square dark"><i className="fas fa-chess-pawn black"></i></div>
+          <div className="square light"><i className="fas fa-chess-pawn black"></i></div>
+          <div className="square dark"><i className="fas fa-chess-pawn black"></i></div>
+          <div className="square light"><i className="fas fa-chess-pawn black"></i></div>
+          <div className="square dark"><i className="fas fa-chess-pawn black"></i></div>
+        </div>
+        <div className="row">
+          <div className="square dark"></div>
+          <div className="square light"></div>
+          <div className="square dark"></div>
+          <div className="square light"></div>
+          <div className="square dark"></div>
+          <div className="square light"></div>
+          <div className="square dark"></div>
+          <div className="square light"></div>
+        </div>
+        <div className="row">
+          <div className="square light"></div>
+          <div className="square dark"></div>
+          <div className="square light"></div>
+          <div className="square dark"></div>
+          <div className="square light"></div>
+          <div className="square dark"></div>
+          <div className="square light"></div>
+          <div className="square dark"></div>
+        </div>
+        <div className="row">
+          <div className="square dark"></div>
+          <div className="square light"></div>
+          <div className="square dark"></div>
+          <div className="square light"></div>
+          <div className="square dark"></div>
+          <div className="square light"></div>
+          <div className="square dark"></div>
+          <div className="square light"></div>
+        </div>
+        <div className="row">
+          <div className="square light"></div>
+          <div className="square dark"></div>
+          <div className="square light"></div>
+          <div className="square dark"></div>
+          <div className="square light"></div>
+          <div className="square dark"></div>
+          <div className="square light"></div>
+          <div className="square dark"></div>
+        </div>
+        <div className="row">
+          <div className="square dark"><i className="fas fa-chess-pawn white"></i></div>
+          <div className="square light"><i className="fas fa-chess-pawn white"></i></div>
+          <div className="square dark"><i className="fas fa-chess-pawn white"></i></div>
+          <div className="square light"><i className="fas fa-chess-pawn white"></i></div>
+          <div className="square dark"><i className="fas fa-chess-pawn white"></i></div>
+          <div className="square light"><i className="fas fa-chess-pawn white"></i></div>
+          <div className="square dark"><i className="fas fa-chess-pawn white"></i></div>
+          <div className="square light"><i className="fas fa-chess-pawn white"></i></div>
+        </div>
+        <div className="row">
+          <div className="square light"><i className="fas fa-chess-rook white"></i></div>
+          <div className="square dark"><i className="fas fa-chess-knight white"></i></div>
+          <div className="square light"><i className="fas fa-chess-bishop white"></i></div>
+          <div className="square dark"><i className="fas fa-chess-queen white"></i></div>
+          <div className="square light"><i className="fas fa-chess-king white"></i></div>
+          <div className="square dark"><i className="fas fa-chess-bishop white"></i></div>
+          <div className="square light"><i className="fas fa-chess-knight white"></i></div>
+          <div className="square dark"><i className="fas fa-chess-rook white"></i></div>
+        </div>
+      </div>
     </div>
   );
 };
